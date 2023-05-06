@@ -8,9 +8,13 @@
 </head>
 <body>
     <h1>Welcome to Guppies!</h1>
-    <p id="money">Current money: $100</p>
+    <p id="money"></p>
     <label for="bet">Enter your bet:</label>
     <input type="number" id="bet" min="1" max="100">
+    <br>
+    <label for="guess">Will the second number be higher or lower? (H/L):</label>
+    <input type="text" id="guess" maxlength="1">
+    <br>
     <button id="play">Play</button>
     <p id="result"></p>
     <script src="guppies.js"></script>
