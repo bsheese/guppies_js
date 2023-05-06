@@ -5,6 +5,10 @@ const playButton = document.getElementById('play');
 const moneyDisplay = document.getElementById('money');
 const resultDisplay = document.getElementById('result');
 
+document.addEventListener('DOMContentLoaded', () => {
+    moneyDisplay.textContent = `Current money: $${money}`;
+});
+
 playButton.addEventListener('click', () => {
     const bet = parseInt(betInput.value);
     const guess = guessInput.value.toUpperCase();
