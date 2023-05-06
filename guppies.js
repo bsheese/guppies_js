@@ -55,3 +55,20 @@ function submitGuess() {
 
     moneyDisplay.textContent = `Current money: $${money}`;
     round++;
+    roundDisplay.textContent = `Round: ${round}`;
+
+    if (money <= 0) {
+        resultDisplay.textContent += '\nGame over. You lost all your money.';
+        betButton.disabled = true;
+        guessButton.disabled = true;
+    } else if (money >= 1000) {
+        resultDisplay.textContent += '\nCongratulations! You reached $1000 and won the game!';
+        betButton.disabled = true;
+        guessButton.disabled = true;
+    } else {
+        betInput.value = '';
+        guessInput.value = '';
+        betSection.style.display = 'block';
+        guessSection.style.display = 'none';
+    }
+}
