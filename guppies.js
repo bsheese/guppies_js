@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     moneyDisplay.textContent = `Current money: $${money}`;
 });
 
-playButton.addEventListener('click', () => {
+playButton.addEventListener('click', playGame);
+
+function playGame() {
     const bet = parseInt(betInput.value);
     const guess = guessInput.value.toUpperCase();
 
@@ -43,4 +45,4 @@ playButton.addEventListener('click', () => {
         resultDisplay.textContent += '\nCongratulations! You reached $1000 and won the game!';
         playButton.disabled = true;
     }
-});
+}
